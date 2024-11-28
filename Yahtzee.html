@@ -1,0 +1,218 @@
+﻿<!--20224612_cse2wdx_assignment2-->
+<!DOCTYPE html>
+
+<html lang="en" xmlns=http://www.w3.org/1999/xhtml>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Google api also works. Uncomment if jquery files are not found in Scripts/-->
+    <!--<script src=https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js></script>-->
+
+    <script src="Scripts/jquery-3.6.3.js"></script>
+    <script src="Scripts/jquery-3.6.3.min.js"></script>
+    <script src="Scripts/jquery-ui.js"></script><!--Shake effect ui-->
+    <link href="Yahtzee.css" rel="stylesheet">
+
+    <title>Yahtzee</title><!--Page title in browser-->
+</head>
+
+<body>
+    <nav>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+               
+                
+    
+                
+                
+               
+            </ul>
+        </nav>
+
+    <div class="header">
+        <h1>Y a h t z e e !</h1>
+    </div><br>
+    <!--initial dice images are the "question mark pictures"-->
+    <div class="Dice">
+        <img class="Dice1" src="Images/0.png" alt="?">
+        <img class="Dice2" src="Images/0.png" alt="?">
+        <img class="Dice3" src="Images/0.png" alt="?">
+        <img class="Dice4" src="Images/0.png" alt="?">
+        <img class="Dice5" src="Images/0.png" alt="?">
+    </div><br>
+
+    <button class="RollButton">Roll the dice!</button><br><!--Roll button-->
+
+    <div class="Attempts">You can roll 3 times!</div><br><!--Interactive roll count message placeholder-->
+
+    <button class="RollAgain">I want to roll again</button><br><!--Button to re-start rolling afer three rolls-->
+    <!--Upper table-->
+    <div class="row">
+        <div class="column">
+            <table id="TableUpper">
+                <tr>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>How to score</th>
+                    <th>Points</th>
+                    <th>Submit</th>
+                </tr>
+                <tr>
+                    <td>Aces</td>
+                    <td>Any combination</td>
+                    <td>Sum of dice with "1"</td>
+                    <td class="PointsAces">0</td>
+                    <td><button id="SubmitAces" class="SubmitButton">Submit</button></td>
+                </tr>
+                <tr>
+                    <td>Twos</td>
+                    <td>Any combination</td>
+                    <td>Sum of dice with "2"</td>
+                    <td class="PointsTwos">0</td>
+                    <td><button id="SubmitTwos" class="SubmitButton">Submit</button></td>
+                </tr>
+                <tr>
+                    <td>Threes</td>
+                    <td>Any combination</td>
+                    <td>Sum of dice with "3"</td>
+                    <td class="PointsThrees">0</td>
+                    <td><button id="SubmitThrees" class="SubmitButton">Submit</button></td>
+                </tr>
+                <tr>
+                    <td>Fours</td>
+                    <td>Any combination</td>
+                    <td>Sum of dice with "4"</td>
+                    <td class="PointsFours">0</td>
+                    <td><button id="SubmitFours" class="SubmitButton">Submit</button></td>
+                </tr>
+                <tr>
+                    <td>Fives</td>
+                    <td>Any combination</td>
+                    <td>Sum of dice with "5"</td>
+                    <td class="PointsFives">0</td>
+                    <td><button id="SubmitFives" class="SubmitButton">Submit</button></td>
+                </tr>
+                <tr>
+                    <td>Sixes</td>
+                    <td>Any combination</td>
+                    <td>Sum of dice with "6"</td>
+                    <td class="PointsSixes">0</td>
+                    <td><button id="SubmitSixes" class="SubmitButton">Submit</button></td>
+                </tr>
+                <tr>
+                    <td>Subtotal</td>
+                    <td>Upper Subtotal</td>
+                    <td>Sum of six rows above</td>
+                    <td class="UpperSub">0</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Bonus</td>
+                    <td>Awarded if subtotal is 63 or more</td>
+                    <td>Score 35</td>
+                    <td class="PointsBonus">0</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><b>Upper total</b></td>
+                    <td class="UpperTotal"><b>0</b></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        <!--Lower table-->
+        <div class="column">
+            <table id="TableLower">
+                <tr>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>How to score</th>
+                    <th>Points</th>
+                    <th>Submit</th>
+                </tr>
+                <tr>
+                    <td>Three of a kind</td>
+                    <td>Minimum of three dice the same</td>
+                    <td>Sum of all dice</td>
+                    <td class="PointsThreeSame">0</td>
+                    <td><button id="SubmitToK" class="SubmitButton">Submit</button></td>
+                </tr>
+                <tr>
+                    <td>Four of a kind</td>
+                    <td>Minimum of four dice the same</td>
+                    <td>Sum of all dice</td>
+                    <td class="PointsFourSame">0</td>
+                    <td><button id="SubmitFoK" class="SubmitButton">Submit</button></td>
+                </tr>
+                <tr>
+                    <td>Full house</td>
+                    <td>Three of one number and two of another</td>
+                    <td>Score 25</td>
+                    <td class="PointsFull">0</td>
+                    <td><button id="SubmitFlH" class="SubmitButton">Submit</button></td>
+                </tr>
+                <tr>
+                    <td>Small Straight</td>
+                    <td>Four dice in sequence</td>
+                    <td>Score 30</td>
+                    <td class="PointsSmallS">0</td>
+                    <td><button id="SubmitSmS" class="SubmitButton">Submit</button></td>
+                </tr>
+                <tr>
+                    <td>Large Straight</td>
+                    <td>Five dice in sequence</td>
+                    <td>Score 40</td>
+                    <td class="PointsLargeS">0</td>
+                    <td><button id="SubmitLgS" class="SubmitButton">Submit</button></td>
+                </tr>
+                <tr>
+                    <td>Yahtzee</td>
+                    <td>All dice the same</td>
+                    <td>Score 50</td>
+                    <td class="PointsYahtzee">0</td>
+                    <td><button id="SubmitYahtzee" class="SubmitButton">Submit</button></td>
+                </tr>
+                <tr>
+                    <td>Chance</td>
+                    <td>Any combination</td>
+                    <td>Sum of all dice</td>
+                    <td class="PointsChance">0</td>
+                    <td><button id="SubmitChance" class="SubmitButton">Submit</button></td>
+                </tr>
+                <tr>
+                    <td>Yahtzee bonus</td>
+                    <td>Additional Yahtzees</td>
+                    <td>Score 100 each</td>
+                    <td class="PointsYahtzeeBonus">0</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><b>Lower total</b></td>
+                    <td class="LowerTotal"><b>0</b></td>
+                    <td></td>
+                </tr>
+            </table><br>
+        </div>
+    </div>
+    <!--Totals table-->
+    <table id="TableTotal">
+        <tr>
+            <th>Your total score:</th>
+            <th class="GrandTotal">0</th>
+    </table><br>
+
+    <button class="RestartButton">Restart game</button><!--Button to reload page-->
+
+    <script src="Yahtzee.js"></script>
+
+    
+        </p>
+    </div>
+</body>
+</html>
+
+

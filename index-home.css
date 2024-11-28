@@ -1,0 +1,111 @@
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .item {
+        flex: 1 1 200px;
+    }
+}
+
+body{
+    
+        text-align: center;
+        line-height: 1;
+       
+   
+        text-align: left;
+        background-image: url("f2dcade7-7725-4685-bf02-6b6297c41a25.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: auto; 
+        font: size 30px;
+        color:black;
+        text-shadow: 
+        -1px -1px 0 rgba(252, 247, 247, 0.96),  
+         1px -1px 0 rgb(253, 252, 252),
+        -1px  1px 0 rgb(254, 253, 253),
+         1px  1px 0 rgb(250, 247, 247);
+        /* width: 75%;
+        height: 45%; */
+        /* margin: 0; */
+        }
+        
+   
+       
+     
+              
+        
+     
+
+
+header {
+  
+  
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 30px;
+  
+
+}
+
+h1 {
+    
+    font-size: 45pt;
+    color:red;
+ 
+    
+        text-shadow: 
+          -1px -1px 0 black,  
+           1px -1px 0 black,
+          -1px  1px 0 black,
+           1px  1px 0 black; /* Four shadows to create an outline */
+       margin-bottom: 80px;
+       margin-top: 80px;
+       text-align: center;
+   
+}
+
+
+ul, li {
+    text-align: left;
+    color:brown;
+    
+  
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
