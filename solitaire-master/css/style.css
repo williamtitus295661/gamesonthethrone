@@ -1,0 +1,105 @@
+body {
+  background-image: url("../concrete.jpg");
+  font-size: 19px;
+  color: blue;
+  min-width: 300px;
+  font-family: "Creepster", cursive;
+
+}
+
+
+h1 {
+    
+  font-size: 45pt;
+  color:red;
+
+  
+      text-shadow: 
+        -1px -1px 0 black,  
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black; /* Four shadows to create an outline */
+     margin-bottom: 80px;
+     margin-top: 80px;
+     text-align: center;
+ 
+}
+
+ul, li {
+  font-weight: bolder;
+  text-shadow: 
+  -1px -1px 0 black,  
+   1px -1px 0 black,
+  -1px  1px 0 black,
+   1px  1px 0 black;
+  font-size: larger;
+  text-align: left;
+  color:brown;
+  
+
+
+}
+
+button {
+  font-family: "Creepster", cursive;
+  font-size: 12px;
+  background-color: yellowgreen;
+  box-shadow: black;
+  color: blue;
+}
+
+
+span {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.card {
+  box-shadow: inset;
+  margin: 12px 12px -55px 12px;  
+  flex: 1 1 100%; /* Cards take full width on small screens */
+
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 300px;
+}
+
+.empty {
+  opacity: 0;
+}
+  
+.winMessage {
+  text-align: center;
+}
+
+.topPanel {
+  text-align: center;
+  padding: 10px;
+}
+
+  
+
+  button {
+    font-size: 16px;
+  }
+
+  span {
+    display: inline-block;
+    padding: 0 20px;
+}
+  .wrapper {
+  margin: 0 auto;
+  width: 720px;
+}
+
+  .topPanel {
+    text-align: center;
+    padding: 10px;
+  }
+  .card {
+    
+    margin: 5px 5px -80px 5px;    
+    flex: 1 1 200px; /* Flex-grow, flex-shrink, and flex-basis */  
+  }

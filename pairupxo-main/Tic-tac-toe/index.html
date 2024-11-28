@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+
+        <nav>
+            <ul>
+                <li><a href="https://williamtitus295661.github.io/Games-on-the-throne/">Home</a></li>
+                
+                
+    
+                
+                
+               
+            </ul>
+        </nav>
+    <div class="container">
+        <h1>Tic-Tac-Toe</h1>
+
+        <!-- Game mode selection buttons -->
+        <div class="mode-selection">
+            <button id="single-player">Single Player</button>
+            <button id="multi-player">Multiplayer</button>
+        </div>
+        
+        <!-- Difficulty level buttons (hidden by default) -->
+        <div class="difficulty-selection" id="difficulty-selection" style="display: none;">
+            <button id="simple">Simple</button>
+            <button id="complex">Complex</button>
+        </div>
+
+        <!-- Game board -->
+        <div class="game-board" id="game-board" style="display: none;">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <!-- Game status message -->
+        <div id="message" class="message"></div>
+
+        <button id="reset" style="display: none;">Reset Game</button>
+        <button onclick="location.href='https://williamtitus295661.github.io/Games-on-the-throne/pairupxo-main/Tic-tac-toe/index.html'">Main Menu</button>
+
+        
+
+        
+    </div>
+
+    <!-- Initial script to handle mode selection -->
+    <script src="mode-selection.js"></script>
+</body>
+
+</html>

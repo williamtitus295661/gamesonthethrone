@@ -1,0 +1,210 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image:url("night-sky.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: auto; 
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    text-shadow: 
+        -1px -1px 0 black,  
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 3em;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 
+        -1px -1px 0 black,  
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+}
+ul, li {
+    font-weight: bolder;
+    text-shadow: 
+    -1px -1px 0 black,  
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+    font-size: larger;
+    text-align:  left;
+    color:brown;
+    
+  
+  
+  }
+
+/* Mode Selection Buttons */
+.mode-selection, .difficulty-selection {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.mode-selection button, .difficulty-selection button {
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 50px;
+    background: #ff5e5e;
+    color: #fff;
+    cursor: pointer;
+    text-shadow: 
+        -1px -1px 0 black,  
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mode-selection button:hover, .difficulty-selection button:hover {
+    background: #ff4343;
+    text-shadow: 
+        -1px -1px 0 black,  
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+    transform: translateY(-5px);
+}
+
+/* Game Board Styles */
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 0 auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s, transform 0.1s;
+    color: #333;
+}
+
+.cell:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+}
+
+/* Reset Button */
+#reset {
+    display: none;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 50px;
+    background-color: #ff5e5e;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#reset:hover {
+    background-color: #ff4343;
+    transform: translateY(-5px);
+}
+button main menu{
+    background-color: #ff4343;
+    transform: translateY(-5px);
+}
+
+/* Message display styles */
+.message {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #f44336; /* Red background for error messages */
+    border-radius: 5px;
+    text-align: center;
+    max-width: 300px;
+    margin: 20px auto; /* Center the message horizontally */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add some shadow for depth */
+    display: none; /* Hide by default, show when there is a message */
+}
+
+/* Display the message when it has content */
+.message:empty {
+    display: none;
+}
+
+.message:not(:empty) {
+    display: block;
+}
+
+#win-count {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-left: 20px; /* Adjust this value to move the table right */
+}
+
+#win-count table {
+    border-collapse: collapse;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 20px; /* Adjust this value to move the table right */
+}
+
+#win-count th, #win-count td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+#win-count th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+#win-count td {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+#win-count tr:nth-child(even) td {
+    background-color: #eafaf1;
+}
+
+#win-count tr:hover td {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+}
